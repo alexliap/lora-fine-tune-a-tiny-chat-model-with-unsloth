@@ -64,8 +64,14 @@ def count_trainable_parameters(model):
 def trainable_fraction(trainable_count, total_count):
     return trainable_count/total_count
 
-# Step 9 - build_instruction_examples (not yet solved)
-# TODO: implement
+# Step 9 - build_instruction_examples
+def build_instruction_examples():
+    """Return a small list of {'instruction', 'response'} dicts for SFT."""
+    return [
+        {"instruction": "How are you?", "response": "Fine thanks!"},
+        {"instruction": "Yo yo yo man, hello", "response": "Ha ha, what's up man?"},
+        {"instruction": "Is everything okay?", "response": "No, leave me alone for a minute."},
+    ]
 
 # Step 10 - format_instruction_example (not yet solved)
 # TODO: implement
