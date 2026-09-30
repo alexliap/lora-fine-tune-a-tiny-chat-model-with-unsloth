@@ -73,8 +73,13 @@ def build_instruction_examples():
         {"instruction": "Is everything okay?", "response": "No, leave me alone for a minute."},
     ]
 
-# Step 10 - format_instruction_example (not yet solved)
-# TODO: implement
+# Step 10 - format_instruction_example
+def format_instruction_example(example):
+    """Return a single training string with role markers for instruction and response."""
+    intsruct = f"### Instruction:\n{example['instruction']}"
+    resp = f"### Response:\n{example['response']}"
+
+    return "\n\n".join([intsruct, resp])
 
 # Step 11 - format_all_examples (not yet solved)
 # TODO: implement
